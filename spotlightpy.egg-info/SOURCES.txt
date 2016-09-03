@@ -1,6 +1,7 @@
 LICENSE.txt
 MANIFEST.in
 README.rst
+setup.py
 spotlightpy/__init__.py
 spotlightpy/spotlight.py
 spotlightpy.egg-info/PKG-INFO

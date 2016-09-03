@@ -2,10 +2,10 @@ from setuptools import setup
 
 
 setup(	name = 'spotlightpy',
-		version = 0.1,
-		description = 'Extract Images from Microsoft Spotlight(WinX only) Porject',
+		version = 0.3,
+		description = 'Extract Images from Microsoft Spotlight Project(Windows X only)',
 		classifiers = [
-		"Development Status :: 3 - Alpha",
+		"Development Status :: 5 - Production/Stable",
 		"License :: OSI Approved :: MIT License",
 		"Programming Language :: Python :: 3 :: Only",
 		"Operating System :: Microsoft :: Windows",
