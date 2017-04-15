@@ -32,15 +32,18 @@ def storeimages(destination_path = "C:\\spotlight") :
 	files = os.listdir(destination_path)
 
 	for file in os.listdir(folder):
-		img = Image.open(os.path.join(folder,file))
-		if img.height == 1080 and img.width == 1920 :
-			f = open(os.path.join(folder,file),'rb')
-			name =  hashlib.md5(f.read()).hexdigest()+'.jpeg'
-			f.close()
-			if name not in files:
-				img.save(os.path.join(destination_path,name))
-				files.append(name)
-		img.close()
+		try : 
+			img = Image.open(os.path.join(folder,file))
+			if img.height == 1080 and img.width == 1920 :
+				f = open(os.path.join(folder,file),'rb')
+				name =  hashlib.md5(f.read()).hexdigest()+'.jpeg'
+				f.close()
+				if name not in files:
+					img.save(os.path.join(destination_path,name))
+					files.append(name)
+			img.close()
+		except OSError : 
+			continue
 	
 def getimages():
 	'''	Usage : getimages(None) -> list(PIL.Image)
